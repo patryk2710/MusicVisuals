@@ -22,7 +22,7 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("K_K_Cruisin.mp3");   
+        loadAudio();   
         //loadAudio("heroplanet.mp3");
         
         // Call this instead to read audio from the microphone
@@ -33,13 +33,9 @@ public class MyVisual extends Visual
         cv = new CubeVisual1(this);
     }
 
-    public void keyPressed()
-    {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-        }
+    public void mousePressed() {
+        getAudioPlayer().cue(0);
+        getAudioPlayer().play();
     }
 
     public void draw()
@@ -58,8 +54,11 @@ public class MyVisual extends Visual
         calculateFrequencyBands(); 
 
         // Call this is you want to get the average amplitude
-        calculateAverageAmplitude();        
-        //wf.render();
+        calculateAverageAmplitude();     
+        
+        // Called to change color based on low value
+        calculateCurrentColor();
+
         abv.render();
         cv.render();
     }

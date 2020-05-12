@@ -20,6 +20,8 @@ public abstract class Visual extends PApplet
 
 	private float amplitude  = 0;
 	private float smothedAmplitude = 0;
+	private float currentcolor = 0;
+
 
 	
 	
@@ -49,6 +51,7 @@ public abstract class Visual extends PApplet
 		{
 			throw new VisualException("You must call startListening or loadAudio before calling fft");
 		}
+			
 	}
 
 	
@@ -56,15 +59,14 @@ public abstract class Visual extends PApplet
 	{
 		float total = 0;
 		for(int i = 0 ; i < ab.size() ; i ++)
-        {
+		{
 			total += abs(ab.get(i));
 		}
 		amplitude = total / ab.size();
 		smothedAmplitude = PApplet.lerp(smothedAmplitude, amplitude, 0.1f);
 	}
 
-
-	protected void calculateFrequencyBands() {
+	protected void calculateFrequencyBands() {	
 		for (int i = 0; i < bands.length; i++) {
 			int start = (int) pow(2, i) - 1;
 			int w = (int) pow(2, i);
@@ -76,7 +78,16 @@ public abstract class Visual extends PApplet
 			average /= (float) w;
 			bands[i] = average * 5.0f;
 			smoothedBands[i] = lerp(smoothedBands[i], bands[i], 0.05f);
-		}
+			}
+	}
+
+	public void calculateCurrentColor() {
+		if(fft.getBand(0) > 75) {
+			currentcolor = currentcolor + 25;
+			if(currentcolor > 255) {
+				currentcolor = 0;
+			}
+		} 
 	}
 
 	public void startListening()
@@ -85,9 +96,9 @@ public abstract class Visual extends PApplet
 		ab = ai.left;
 	}
 
-	public void loadAudio(String filename)
+	public void loadAudio()
 	{
-		ap = minim.loadFile(filename, frameSize);
+		ap = minim.loadFile("K_K_Cruisin.mp3", frameSize);
 		ab = ap.left;
 	}
 
@@ -138,5 +149,9 @@ public abstract class Visual extends PApplet
 
 	public AudioPlayer getAudioPlayer() {
 		return ap;
+	}
+
+	public float getCurrentColor() {
+		return currentcolor;
 	}
 }

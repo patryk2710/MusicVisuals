@@ -14,7 +14,7 @@ public class CubeVisual1
 
     public void render()
     {
-        mv.stroke(PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        mv.stroke(mv.getCurrentColor() , 255, 255);
         mv.strokeWeight(4);
         mv.noFill();
         mv.lights();
@@ -24,7 +24,10 @@ public class CubeVisual1
         mv.translate(0, 0, -200);
         mv.rotateX(angle);
         mv.rotateZ(angle);       
-        float boxSize = 50 + (100 * mv.getSmoothedAmplitude()); 
+        float boxSize =(360 * mv.getSmoothedAmplitude());
+        if(boxSize > 125) {
+            boxSize = 125;
+        } 
         mv.box(boxSize);   
         mv.popMatrix();
 
