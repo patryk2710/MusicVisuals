@@ -1,6 +1,6 @@
 package example;
 
-import ie.tudublin.Visual;
+import C18437596.Visual;
 
 public class CubeVisual1 extends Visual
 {
@@ -14,7 +14,7 @@ public class CubeVisual1 extends Visual
     {
         startMinim();
         //startListening();
-        loadAudio("heroplanet.mp3");
+        loadAudio("K_K_Cruisin.mp3");
         colorMode(HSB);
     }
 

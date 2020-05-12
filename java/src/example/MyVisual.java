@@ -1,6 +1,6 @@
 package example;
 
-import ie.tudublin.*;
+import C18437596.*;
 
 public class MyVisual extends Visual
 {    
