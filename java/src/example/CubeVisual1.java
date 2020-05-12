@@ -1,35 +1,15 @@
 package example;
 
-import C18437596.Visual;
+import processing.core.*;
 
-public class CubeVisual1 extends Visual
+public class CubeVisual1
 {
-    public void settings()
-    {
-        size(800, 600, P3D);
-        //fullScreen(P3D, SPAN);
-    }
 
-    public void setup()
-    {
-        startMinim();
-        //startListening();
-        loadAudio("K_K_Cruisin.mp3");
-        colorMode(HSB);
-    }
-
-    public void keyPressed()
-    {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-        }
-    }
+    
 
     float angle = 0;
 
-    public void draw()
+    public void render()
     {
         background(0);
         calculateAverageAmplitude();
