@@ -1,8 +1,8 @@
 # Music Visualiser Project
 
-Name:
+Name: Patryk Rojowiec
 
-Student Number: 
+Student Number: C18437596
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -10,6 +10,14 @@ Student Number:
 - You should start by creating a subclass of ie.tudublin.Visual
 - There is an example visualiser called MyVisual in the example package
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
+
+## to do 
+- Color changing to set color based on amp
+- Song selector
+- multiple cubes
+- *cube edges expanding based on fft*
+- make bottom band prettier
+- squares expanding from middle, make a moving look
 
 # Description of the assignment
 
