@@ -22,8 +22,7 @@ public abstract class Visual extends PApplet
 	private float smothedAmplitude = 0;
 	private float currentcolor = 0;
 
-
-	
+	private int currentcubeno = 1;
 	
 	public void startMinim() 
 	{
@@ -102,6 +101,10 @@ public abstract class Visual extends PApplet
 		ab = ap.left;
 	}
 
+	public void cubeNumber(int x) {
+		currentcubeno = x;
+	}
+
 	public int getFrameSize() {
 		return frameSize;
 	}
@@ -153,5 +156,9 @@ public abstract class Visual extends PApplet
 
 	public float getCurrentColor() {
 		return currentcolor;
+	}
+
+	public int getCubeAmount() {
+		return currentcubeno;
 	}
 }

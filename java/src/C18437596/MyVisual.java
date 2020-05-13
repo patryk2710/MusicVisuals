@@ -38,6 +38,21 @@ public class MyVisual extends Visual
         getAudioPlayer().play();
     }
 
+    public void keyPressed() {
+        if(key == '1') {
+            cubeNumber(1);
+        }
+        if(key == '2') {
+            cubeNumber(2);
+        }
+        if(key == '3') {
+            cubeNumber(3);
+        }
+        // if(key == '4') {
+        //     cubeNumber(4);
+        // }
+    }
+
     public void draw()
     {
         background(0);

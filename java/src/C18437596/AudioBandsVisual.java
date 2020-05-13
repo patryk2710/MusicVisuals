@@ -11,13 +11,13 @@ public class AudioBandsVisual
     {
         this.mv = mv; 
     }
-
+    
     public void render()
     {
         float gap = mv.width / (float) mv.getBands().length;
         float gap2 = (mv.width / (float) mv.getBands().length) / 2;
         float color = mv.getCurrentColor();
-        System.out.println(color);
+        //System.out.println(color);
         mv.noStroke();
         for(int i = 0 ; i < mv.getBands().length ; i ++)
         {
