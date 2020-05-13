@@ -22,9 +22,9 @@ public class AudioBandsVisual
         for(int i = 1 ; i < mv.getBands().length-1 ; i ++)
         {
             mv.fill(color , 255, 200);
-            mv.ellipse((i*gap)+gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[i] * 0.5f); 
+            mv.ellipse((i*gap)+gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[i] * 0.3f); 
         }
-        mv.ellipse(gap2,mv.height, gap*1.5f, -mv.getSmoothedBands()[0] * 1.5f);
-        mv.ellipse((gap*mv.getBands().length)-gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[mv.getBands().length-1] * 2.2f);
+        mv.ellipse(gap2,mv.height, gap*1.5f, -mv.getSmoothedBands()[0] * 1.2f);
+        mv.ellipse((gap*mv.getBands().length)-gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[mv.getBands().length-1] * 1.9f);
     }
 }

@@ -16,7 +16,7 @@ public class BackgroundMovement
     {
         float amplitude = 20*mv.getAmplitude();
         int currentamp = (int)amplitude;
-        mv.stroke(mv.getCurrentColor() , 255, 150);
+        mv.stroke(mv.getCurrentColor() , 255, 200);
         float gap = 25;
         float x = 25;
         float y = 25;
