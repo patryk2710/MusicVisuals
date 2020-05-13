@@ -23,6 +23,7 @@ public abstract class Visual extends PApplet
 	private float currentcolor = 0;
 
 	private int currentcubeno = 1;
+	private int currentcubeamount = 1;
 	
 	public void startMinim() 
 	{
@@ -83,6 +84,10 @@ public abstract class Visual extends PApplet
 	public void calculateCurrentColor() {
 		if(fft.getBand(0) > 75) {
 			currentcolor = currentcolor + 25;
+			currentcubeamount = currentcubeamount + 1;
+			if(currentcubeamount > 3) {
+				currentcubeamount = 1;
+			}
 			if(currentcolor > 255) {
 				currentcolor = 0;
 			}
@@ -160,5 +165,9 @@ public abstract class Visual extends PApplet
 
 	public int getCubeAmount() {
 		return currentcubeno;
+	}
+
+	public int getCurrentCubeAmount() {
+		return currentcubeamount;
 	}
 }

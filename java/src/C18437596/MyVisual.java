@@ -2,7 +2,7 @@ package C18437596;
 
 public class MyVisual extends Visual
 {    
-    //WaveForm wf;
+    BackgroundMovement bm;
     AudioBandsVisual abv;
     CubeVisual1 cv;
 
@@ -31,6 +31,7 @@ public class MyVisual extends Visual
         //wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         cv = new CubeVisual1(this);
+        bm = new BackgroundMovement(this);
     }
 
     public void mousePressed() {
@@ -48,9 +49,9 @@ public class MyVisual extends Visual
         if(key == '3') {
             cubeNumber(3);
         }
-        // if(key == '4') {
-        //     cubeNumber(4);
-        // }
+         if(key == '4') {
+            cubeNumber(4);
+        }
     }
 
     public void draw()
@@ -74,6 +75,7 @@ public class MyVisual extends Visual
         // Called to change color based on low value
         calculateCurrentColor();
 
+        bm.render();
         abv.render();
         cv.render();
     }

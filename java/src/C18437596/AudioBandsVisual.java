@@ -17,12 +17,14 @@ public class AudioBandsVisual
         float gap = mv.width / (float) mv.getBands().length;
         float gap2 = (mv.width / (float) mv.getBands().length) / 2;
         float color = mv.getCurrentColor();
-        //System.out.println(color);
+        
         mv.noStroke();
-        for(int i = 0 ; i < mv.getBands().length ; i ++)
+        for(int i = 1 ; i < mv.getBands().length-1 ; i ++)
         {
-            mv.fill(color , 255, 255);
-            mv.ellipse((i*gap)+gap2, mv.height, gap, -mv.getSmoothedBands()[i] * 0.5f); 
+            mv.fill(color , 255, 200);
+            mv.ellipse((i*gap)+gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[i] * 0.5f); 
         }
+        mv.ellipse(gap2,mv.height, gap*1.5f, -mv.getSmoothedBands()[0] * 1.5f);
+        mv.ellipse((gap*mv.getBands().length)-gap2, mv.height, gap*1.5f, -mv.getSmoothedBands()[mv.getBands().length-1] * 2.2f);
     }
 }
