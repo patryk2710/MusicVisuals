@@ -2,7 +2,7 @@ package C18437596;
 
 import processing.core.*;
 
-// This is an example of a visual that uses the audio bands
+// Audio Circles at the bottom to make an equalizer like animation
 public class AudioBandsVisual
 {
     MyVisual mv;

@@ -2,11 +2,11 @@ package C18437596;
 
 import processing.core.*;
 
-public class CubeVisual1
+public class CubeVisual
 {
     MyVisual mv;
 
-    public CubeVisual1(MyVisual mv)
+    public CubeVisual(MyVisual mv)
     {
         this.mv = mv;
     }

@@ -2,7 +2,7 @@ package C18437596;
 
 import processing.core.*;
 
-// This is an example of a visual that uses the audio bands
+// Background squares to make a background animation
 public class BackgroundMovement
 {
     MyVisual mv;
@@ -23,10 +23,6 @@ public class BackgroundMovement
         float w = mv.width-25;
         float h = mv.height-25;
         for(int i = 0; i < currentamp; i++) {
-            // System.out.println(w);
-            // mv.rect(x, y, w, h);
-            // mv.rect(-x,-y, w, h);
-            // System.out.println(w);
             mv.line(x,y,w,y);
             mv.line(x,y,x,h);
             mv.line(w,y,w,h);

@@ -4,16 +4,11 @@ public class MyVisual extends Visual
 {    
     BackgroundMovement bm;
     AudioBandsVisual abv;
-    CubeVisual1 cv;
+    CubeVisual cv;
 
     public void settings()
     {
-        //size(1024, 500);
-        
-        // Use this to make fullscreen
-        //fullScreen();
-
-        // Use this to make fullscreen and use P3D for 3D graphics
+        // Using fullscreen and p3d graphics
         fullScreen(P3D, SPAN); 
     }
 
@@ -23,14 +18,11 @@ public class MyVisual extends Visual
                 
         // Call loadAudio to load an audio file to process 
         loadAudio();   
-        //loadAudio("heroplanet.mp3");
-        
-        // Call this instead to read audio from the microphone
-        //startListening(); 
+         
         colorMode(HSB);
-        //wf = new WaveForm(this);
+
         abv = new AudioBandsVisual(this);
-        cv = new CubeVisual1(this);
+        cv = new CubeVisual(this);
         bm = new BackgroundMovement(this);
     }
 
