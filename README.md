@@ -60,7 +60,8 @@ public void calculateCurrentColor() {
 The code for the function is very simple but does the job nicely. Increment the counter whenever the value of band(0), the lowest frequency band, exceeds 75. If the value for the color is greater than the maximum hue value then it loops back around.
 
 Another part that I am proud of is the squares themselves changing their different parameters based on different bands of the frequency spectrum. This creates a very nice visualisation of the cube where is changes thickness, width and height based around bands 0, 4 and 7. This makes the cube be very fluid and dynamic.
-This is a youtube video of my visualisation :
+
+# This is a youtube video of my visualisation :
 
 [![YouTube](https://img.youtube.com/vi/MG2pDhNbrkU/0.jpg)](https://www.youtube.com/watch?v=MG2pDhNbrkU)
 
