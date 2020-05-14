@@ -40,7 +40,7 @@ Part of the code from inside the AudioBandsVisual class. This shows how the colo
 
 
 # What I am most proud of in the assignment
-I am most proud in this assignment about the harmony that using the low frequencies to change color and, if using setting 4, the square amount achieves. I feel that making the color and squares change whenever the bass drops to be a very satisfying experience. Looking at it for me is quite enjoyable. 
+I am most proud in this assignment is the harmony that using the low frequencies to change color and, if using setting 4, the square amount achieves. I feel that making the color and squares change whenever the bass drops to be a very satisfying experience. Looking at it for me is quite enjoyable. 
 It took a bit of thinking and learning about the properties of sound to be able to implement this. It required me to make changes in the Visual class by creating a method "calculateCurrentColor" that will calculate whenever the lowest frequency band reaches a certain value. Whenever this value is exceeded, it would increment a
 visual private counter integer that would then be accordingly called inside the render() functions in the cubeVisual and AudioBandsVisual classes. 
 ```Java
@@ -59,6 +59,7 @@ public void calculateCurrentColor() {
 ```
 The code for the function is very simple but does the job nicely. Increment the counter whenever the value of band(0), the lowest frequency band, exceeds 75. If the value for the color is greater than the maximum hue value then it loops back around.
 
+Another part that I am proud of is the squares themselves changing their different parameters based on different bands of the frequency spectrum. This creates a very nice visualisation of the cube where is changes thickness, width and height based around bands 0, 4 and 7. This makes the cube be very fluid and dynamic.
 This is a youtube video of my visualisation :
 
 [![YouTube](https://img.youtube.com/vi/MG2pDhNbrkU/0.jpg)](https://www.youtube.com/watch?v=MG2pDhNbrkU)
