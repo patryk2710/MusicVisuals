@@ -23,6 +23,7 @@ public abstract class Visual extends PApplet
 
 	private int currentcubeno = 1;
 	private int currentcubeamount = 1;
+	private boolean backgroundonoff = false;
 	
 	public void startMinim() 
 	{
@@ -103,6 +104,10 @@ public abstract class Visual extends PApplet
 		currentcubeno = x;
 	}
 
+	public void toggleBackground() {
+		backgroundonoff = !backgroundonoff;
+	}
+
 	public int getFrameSize() {
 		return frameSize;
 	}
@@ -157,5 +162,9 @@ public abstract class Visual extends PApplet
 
 	public int getCurrentCubeAmount() {
 		return currentcubeamount;
+	}
+
+	public boolean getBackgroundOnOff() {
+		return backgroundonoff;
 	}
 }

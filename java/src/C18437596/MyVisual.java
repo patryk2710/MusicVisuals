@@ -41,8 +41,11 @@ public class MyVisual extends Visual
         if(key == '3') {
             cubeNumber(3);
         }
-         if(key == '4') {
+        if(key == '4') {
             cubeNumber(4);
+        }
+        if(key == 'b') {
+            toggleBackground();
         }
     }
 
