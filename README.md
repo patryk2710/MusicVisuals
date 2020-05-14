@@ -61,5 +61,5 @@ The code for the function is very simple but does the job nicely. Increment the 
 
 This is a youtube video of my visualisation :
 
-[![YouTube](https://www.youtube.com/watch?v=MG2pDhNbrkU)
+[![YouTube](https://img.youtube.com/vi/MG2pDhNbrkU/0.jpg)](https://www.youtube.com/watch?v=MG2pDhNbrkU)
 
