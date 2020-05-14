@@ -59,7 +59,7 @@ public void calculateCurrentColor() {
 ```
 The code for the function is very simple but does the job nicely. Increment the counter whenever the value of band(0), the lowest frequency band, exceeds 75. If the value for the color is greater than the maximum hue value then it loops back around.
 
-This is a youtube video:
+This is a youtube video of my visualisation :
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](https://www.youtube.com/watch?v=MG2pDhNbrkU)
 
